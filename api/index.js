@@ -12,6 +12,7 @@ const getComment = require("./Controllers/getComments");
 const deleteComment = require("./Controllers/deleteComment")
 const getSingleComment = require("./Controllers/getCommentById");
 const updateComment = require("./Controllers/EditComment");
+const updateStatus = require("./Controllers/updateStatus")
 const cors = require("cors");
 const mysql = require("mysql2");
 const connection = require("./connection");
@@ -27,6 +28,7 @@ app.use('/getComment',getComment);
 app.use('/deleteComment',deleteComment);
 app.use('/getCommentByID',getSingleComment);
 app.use('/editComment',updateComment);
+app.use('/updateStatus',updateStatus)
 app.use(express.json());
 app.listen(4000, () => {
     console.log(`Connected to port:`,4000);

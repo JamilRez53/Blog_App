@@ -14,6 +14,7 @@ const Blog = () => {
     useEffect(()=>{
         getBlogs()
     },[]);
+    
   return (
     <div>
         {blog.map((item,index)=>{
