@@ -3,6 +3,10 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {},
+    fontFamily: {
+      Inter: ["Inter", "sans-serif"],
+      // PoppinsBold: [],
+    },
   },
   plugins: [require("daisyui")],
 }

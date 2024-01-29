@@ -1,16 +1,17 @@
 const router  = require('express').Router();
 const connection = require('../connection');
 
-router.get("/getSingleComment/:id",async(req,res)=>{
+router.get("/getSingleComment/:blogId",async(req,res)=>{
     try {
-        const {id} = req.params;
-        const query = "SELECT * FROM comments WHERE id=?"
-        connection.query(query,[id],(error,result)=>{
+        const {blogId} = req.params;
+        console.log(blogId)
+        const query = "SELECT * FROM comments WHERE blogId=?"
+        connection.query(query,[blogId],(error,result)=>{
             if(error){
                 console.log(error);
                 res.status(500).json({msg:error})
             }else{
-                res.status(200).json({data:result[0]})
+                res.status(200).json({data:result})
             }
         })
     } catch (error) {
