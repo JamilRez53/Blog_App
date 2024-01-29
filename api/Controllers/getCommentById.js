@@ -4,7 +4,6 @@ const connection = require('../connection');
 router.get("/getSingleComment/:blogId",async(req,res)=>{
     try {
         const {blogId} = req.params;
-        console.log(blogId)
         const query = "SELECT * FROM comments WHERE blogId=?"
         connection.query(query,[blogId],(error,result)=>{
             if(error){

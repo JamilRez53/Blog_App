@@ -8,7 +8,7 @@ const Home = () => {
      <p className='text-4xl text-white text-center'>This is the blog Application</p>
       </div> 
     
-    <div className="grid grid-cols-2 m-auto font-Inter">
+    <div className="grid grid-cols-1 md:grid-cols-2 m-auto font-Inter">
     
      <Blog/>
     </div>
